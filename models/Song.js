@@ -5,9 +5,10 @@ const songsSchema = new mongoose.Schema({
         artist: {type: String},
         songName: {type: String},
         album: {type: String},
-        genre: {type: String}
-    },
-    {
+        genre: {type: String},
+        favorite: {type: Boolean, default: false}
+    },{
+        timestamps: true,
         toJSON: {
             virtuals: true,
             versionKey: false,
